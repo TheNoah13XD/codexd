@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 export default function Home() {
 	return (
@@ -29,8 +28,8 @@ export default function Home() {
 					<p className='custom-text font-xl mt-2'>It's happening!</p>
 					<p className='custom-text mt-2 max-w-60p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ea est dignissimos magni assumenda possimus mollitia necessitatibus qui nobis veritatis. Error, repudiandae. Deleniti quidem id saepe repellat architecto veritatis ea.</p>
 					<div className="display-f">
-						<a href="/register"><button className='custom-btn br-full pt-2 pb-2 mt-2'><span className='custom-text'>Register now to start coding! Lorem ipsum dolor sit amet.</span></button></a>
-						<a href="/login"><button className='emerald-btn br-full pt-2 pb-2 mt-2 ml-2'><span className='custom-text'>Login here!</span></button></a>
+						<a href="/signup"><button className='custom-btn br-full pt-2 pb-2 mt-2'><span className='custom-text'>Sign up now to start coding! Lorem ipsum dolor sit amet.</span></button></a>
+						<a href="/signin"><button className='emerald-btn br-full pt-2 pb-2 mt-2 ml-2'><span className='custom-text'>Sign In here!</span></button></a>
 					</div>
 				</div>
 				<div className='column'>
