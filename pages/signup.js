@@ -42,6 +42,30 @@ const Signup = () => {
         } else {
             try {
                 await signUp(data.email, data.password)
+                toastRef.current.className = "toast custom-color-bg";
+                toastRef.current.children[0].innerHTML = "Account created successfully"
+                setTimeout(() => {
+                    toastRef.current.className = "toast-hidden custom-color-bg"
+                }, 2000)
+
+                // convert date to proper format
+                const time = auth.currentUser.metadata.creationTime;
+                const convert = new Date(time);
+                const dateWithDay = convert.toDateString();
+                const dateSplit = dateWithDay.split(" ");
+                const month = dateSplit[1];
+                const dateNum = dateSplit[2];
+                const year = dateSplit[3];
+                const dateWithMonthAndYear = `${month} ${dateNum} ${year}`;
+
+                const docRef = setDoc(doc(db, 'users', auth.currentUser.uid), {
+                    username: data.username,
+                    email: data.email,
+                    uid: auth.currentUser.uid,
+                    created: dateWithMonthAndYear
+                }).catch((error) => {
+                    console.log(error)
+                })
             } catch (err) {
                 console.log(err.message)
             }
@@ -52,7 +76,7 @@ const Signup = () => {
 
     useEffect(() => {
         if (user) {
-          router.push('/dashboard')
+          router.push('/users/dashboard')
         }
     }, [user, router])
 

@@ -37,14 +37,6 @@ export const AuthContextProvider = ({children}) => {
 
     const signUp = async (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
-        .then( () => {
-            const docRef = setDoc(doc(db, 'users', auth.currentUser.uid), {
-                'email': email,
-                'uid': auth.currentUser.uid,
-            }).catch((error) => {
-                console.log(error)
-            })
-        })
     }
     const signIn = async (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
