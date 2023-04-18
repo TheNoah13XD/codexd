@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Home() {
 	return (
 		<>
-			<p className='custom-main'>hahdashdhas</p>
+			<p className='custom-main'>works</p>
 		</>
 	)
 }
