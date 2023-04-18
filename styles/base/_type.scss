@@ -1,0 +1,117 @@
+// import local fonts
+
+// google sans display
+@font-face {
+    font-family: "Google Sans Display";
+    src: url("/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Google Sans Display";
+    src: url("/fonts/GoogleSansDisplayMedium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Google Sans Display";
+    src: url("/fonts/GoogleSansDisplayBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+// roboto
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+// spotify-circular
+@font-face {
+    font-family: "spotify-circular";
+    src: url("/fonts/SpotifyCircular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "spotify-circular";
+    src: url("/fonts/SpotifyCircularBlack.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "spotify-circular";
+    src: url("/fonts/SpotifyCircularBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+// helvetica neue
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeue-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/fonts/HelveticaNeue-Medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+// source code pro
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/SourceCodeProRegular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/SourceCodeProMedium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/SourceCodeProBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+$base-font: "Google Sans Display", "Roboto", "spotify-circular", "Helvetica Neue", helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic, sans-serif;
+$info-font: "Roboto", sans-serif;
+$code-font: "Source Code Pro", monospace;
+
+// font variants
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
+}

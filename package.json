@@ -1,0 +1,27 @@
+{
+  "name": "codexd",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lazyy": "sass  --no-source-map styles/index.scss:styles/index.css",
+    "watch:lazyy": "sass  --no-source-map styles/index.scss:styles/index.css --watch",
+    "purge:lazyy": "purgecss --css styles/index.css --content \"pages/**/*.js\" \"components/**/*.js\" --output styles/",
+    "build:lazyy": "npm run purge:lazyy && postcss styles/index.css -u autoprefixer cssnano -r --no-map"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.0",
+    "lazyy-css": "^1.1.3",
+    "next": "13.3.0",
+    "postcss-cli": "^10.1.0",
+    "purgecss": "^5.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.62.0"
+  }
+}
