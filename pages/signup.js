@@ -76,7 +76,7 @@ const Signup = () => {
 
     useEffect(() => {
         if (user) {
-          router.push('/users/dashboard')
+          router.push('/dashboard')
         }
     }, [user, router])
 
