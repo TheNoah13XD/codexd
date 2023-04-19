@@ -7,17 +7,13 @@ import { Router, useRouter } from "next/dist/client/router";
 const Layout = ({children}) => {
 
     const router = useRouter();
-    const showNav = router.pathname === '/' || router.pathname === '/signin' || router.pathname === '/signup' ? false : true;
     const showSide = router.pathname === '/' || router.pathname === '/signin' || router.pathname === '/signup' ? false : true;
 
     return (
         <>
-            {showNav && <Navbar />}
-            <div className="display-f">
+            <div className="row">
                 {showSide && <Sidebar />}
-                <div>
-                    { children }
-                </div>
+                { children }
             </div>
         </>
     );

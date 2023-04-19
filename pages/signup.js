@@ -62,7 +62,9 @@ const Signup = () => {
                     username: data.username,
                     email: data.email,
                     uid: auth.currentUser.uid,
-                    created: dateWithMonthAndYear
+                    created: dateWithMonthAndYear,
+                    points: 0,
+                    badges: 0,
                 }).catch((error) => {
                     console.log(error)
                 })

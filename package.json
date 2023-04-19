@@ -13,6 +13,8 @@
     "build:lazyy": "npm run purge:lazyy && postcss styles/index.css -u autoprefixer cssnano -r --no-map"
   },
   "dependencies": {
+    "@dicebear/collection": "^6.0.2",
+    "@dicebear/core": "^6.0.2",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.14",
     "cssnano": "^6.0.0",
