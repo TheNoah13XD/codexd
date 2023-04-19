@@ -1,15 +1,33 @@
 import Head from 'next/head'
+import { useState, useRef, useEffect } from "react";
 import { MaterialSymbol } from 'react-material-symbols';
 // firebase
-import { useAuth } from '../context/AuthContext';
+import { collection, doc, onSnapshot, orderBy, query, QuerySnapshot, updateDoc } from "firebase/firestore";
+import { db } from '@/firebase/clientApp';
+import { useAuth } from '@/context/AuthContext';
 
 const dashboard = () => {
 
-    const { user } = useAuth()
+    // access firestore
+    const [data, setData] = useState([]);
 
-    if (user) {
-        console.log(user)
-    }
+    useEffect(() => {
+        const collectionRef = collection(db, "users");
+
+        const q = query(collectionRef, orderBy("uid"));
+
+        const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+            setData(QuerySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.number })));
+        });
+        return unsubscribe;
+
+    }, [])
+
+    // access auth
+    const { user } = useAuth()
+    const currentUser = data.filter(data => user.uid === data.uid);
+
+    console.log(currentUser.username)
 
     return (
         <>
