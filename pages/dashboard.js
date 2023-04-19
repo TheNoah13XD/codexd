@@ -27,7 +27,7 @@ const dashboard = () => {
     const { user } = useAuth()
     const currentUser = data.filter(data => user.uid === data.uid);
 
-    console.log(currentUser.username)
+    console.log(currentUser)
 
     return (
         <>
