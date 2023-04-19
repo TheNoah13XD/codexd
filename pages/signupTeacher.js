@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import { auth, db } from "../firebase/clientApp"
 import { doc, setDoc } from 'firebase/firestore';
 
-const Signup = () => {
+const SignupTeacher = () => {
 
     const toastRef = useRef();
     const router = useRouter();
@@ -58,13 +58,14 @@ const Signup = () => {
                 const year = dateSplit[3];
                 const dateWithMonthAndYear = `${month} ${dateNum} ${year}`;
 
-                const docRef = setDoc(doc(db, 'users', auth.currentUser.uid), {
+                const docRef = setDoc(doc(db, 'teacher', auth.currentUser.uid), {
                     username: data.username,
                     email: data.email,
                     uid: auth.currentUser.uid,
                     created: dateWithMonthAndYear,
                     points: 0,
                     badges: 0,
+                    role: 'teacher'
                 }).catch((error) => {
                     console.log(error)
                 })
@@ -132,7 +133,7 @@ const Signup = () => {
                             <p className='custom-text font-lg fw-bold'>Some Text!</p>
                             <p className='custom-text mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit voluptate illo aliquid repudiandae quas at aliquam accusantium accusamus atque!</p>
                             <div className="display-f justify-end">
-                                <a href="/signupTeacher"><button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end'><span className='custom-text'>Teacher?</span></button></a>
+                                <a href="/signup"><button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end'><span className='custom-text'>student?</span></button></a>
                                 <button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end ml-2' onClick={handleSignup}><span className='custom-text'>Register!</span></button>
                             </div>
                         </div>
@@ -143,4 +144,4 @@ const Signup = () => {
     );
 }
  
-export default Signup;
+export default SignupTeacher;

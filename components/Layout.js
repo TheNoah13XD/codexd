@@ -1,5 +1,4 @@
 // components
-import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 // router
 import { Router, useRouter } from "next/dist/client/router";
@@ -7,13 +6,17 @@ import { Router, useRouter } from "next/dist/client/router";
 const Layout = ({children}) => {
 
     const router = useRouter();
-    const showSide = router.pathname === '/' || router.pathname === '/signin' || router.pathname === '/signup' ? false : true;
+    const showSide = router.pathname === '/' || router.pathname === '/signin' || router.pathname === '/signup' || router.pathname === '/signupTeacher' ? false : true;
 
     return (
         <>
             <div className="row">
-                {showSide && <Sidebar />}
-                { children }
+                <div className={ showSide ? "col-2-xs" : "hidden" }>
+                    {showSide && <Sidebar />}
+                </div>
+                <div>
+                    { children }
+                </div>
             </div>
         </>
     );
