@@ -95,7 +95,7 @@ const Signup = () => {
 
             <div className="display-f align-i-center justify-center h-screen w-screen container">
                 <div className="card custom-card-bg-gradient black-bg br-full p-6">
-                    <p className='custom-text font-xl'>Register!</p>
+                    <p className='custom-text font-xl'>SignUp as a student!</p>
                     <div className='row gap-2'>
                         <div className='col-6-xl'>
                             <form action="" className="mt-2">
@@ -131,9 +131,12 @@ const Signup = () => {
                         <div className='col-6-xl'>
                             <p className='custom-text font-lg fw-bold'>Some Text!</p>
                             <p className='custom-text mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit voluptate illo aliquid repudiandae quas at aliquam accusantium accusamus atque!</p>
-                            <div className="display-f justify-end">
-                                <a href="/signupTeacher"><button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end'><span className='custom-text'>Teacher?</span></button></a>
-                                <button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end ml-2' onClick={handleSignup}><span className='custom-text'>Register!</span></button>
+                            <div className="display-f justify-between">
+                                <a href="/signin"><button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end'><span className='custom-text'>signin</span></button></a>
+                                <div className="display-f justify-end">
+                                    <a href="/signupTeacher"><button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end ml-2'><span className='custom-text'>Teacher?</span></button></a>
+                                    <button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end ml-2' onClick={handleSignup}><span className='custom-text'>Register!</span></button>
+                                </div>
                             </div>
                         </div>
                     </div>

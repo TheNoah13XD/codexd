@@ -14,7 +14,7 @@ const Layout = ({children}) => {
                 <div className={ showSide ? "col-2-xs" : "hidden" }>
                     {showSide && <Sidebar />}
                 </div>
-                <div>
+                <div className={ !showSide ? "col-12-xs" : "col-9-xs" }>
                     { children }
                 </div>
             </div>

@@ -74,38 +74,36 @@ const profile = () => {
 				<meta name="description" content="A solution for modern education (an opensource text-based learning platform for coding)" />
 			</Head>
 
-            <div className="col-10-xs">
-                <form action="">
-                    <div className="row align-i-center h-screen">
-                        <div className="col-2-xs">
-                            <div className="avatar-xl">
-                                <div dangerouslySetInnerHTML={{ __html: svg }} />;
-                            </div>
-                        </div>
-                        <div className="col-4-xs">
-                            <label htmlFor="username" className="custom-text">Username:</label>
-                            <input type="text" className='mt-2 input-t' placeholder="Noah"
-                                id='username'
-                                label='username'
-                                value={profile.username}
-                                onChange={(e) => setProfile({ ...profile, username: e.target.value })}
-                            />
-                        </div>
-                        <div className="col-4-xs ml-4">
-                            <label htmlFor="username" className="custom-text">Email:</label>
-                            <input type="email" className='mt-2 input-t' placeholder="broken.contact.1211@gmail.com" 
-                                id='email'
-                                label='email'
-                                value={profile.email}
-                                onChange={(e) => setProfile({ ...profile, email: e.target.value })}
-                            />
-                        </div>
-                        <div className="ml-3">
-                            <button className='custom-btn br-full custom-text' onClick={handleChanges}>save changes</button>
+            <form action="">
+                <div className="row align-i-center h-screen">
+                    <div className="col-2-xs">
+                        <div className="avatar-xl">
+                            <div dangerouslySetInnerHTML={{ __html: svg }} />;
                         </div>
                     </div>
-                </form>
-            </div>
+                    <div className="col-4-xs">
+                        <label htmlFor="username" className="custom-text">Username:</label>
+                        <input type="text" className='mt-2 input-t' placeholder="Noah"
+                            id='username'
+                            label='username'
+                            value={profile.username}
+                            onChange={(e) => setProfile({ ...profile, username: e.target.value })}
+                        />
+                    </div>
+                    <div className="col-4-xs ml-4">
+                        <label htmlFor="username" className="custom-text">Email:</label>
+                        <input type="email" className='mt-2 input-t' placeholder="broken.contact.1211@gmail.com" 
+                            id='email'
+                            label='email'
+                            value={profile.email}
+                            onChange={(e) => setProfile({ ...profile, email: e.target.value })}
+                        />
+                    </div>
+                    <div className="ml-3">
+                        <button className='custom-btn br-full custom-text' onClick={handleChanges}>save changes</button>
+                    </div>
+                </div>
+            </form>
         </>
     );
 }

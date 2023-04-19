@@ -81,16 +81,13 @@ const Signin = () => {
                                         onChange={e => setData({ ...data, password: e.target.value })}
                                     />
                                 </div>
-                                <div className="display-f justify-end">
-                                    <button className='custom-btn br-full pt-2 pb-2 mt-2 justify-end' onClick={handleSignin}><span className='custom-text'>Login!</span></button>
-                                </div>
                             </form>
                         </div>
                         <div className='col-6-xl'>
                             <p className='custom-text font-lg fw-bold'>Some Text!</p>
                             <p className='custom-text mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus impedit voluptate illo aliquid repudiandae quas at aliquam accusantium accusamus atque!</p>
-                            <div className="display-f justify-end">
-                                <button className='custom-btn br-full pt-2 pb-2 mt-6 justify-end'><span className='custom-text'>Forgot Password!</span></button>
+                            <div className="display-f justify-end mt-4">
+                                <button className='custom-btn br-full pt-2 pb-2 mt-2 justify-end' onClick={handleSignin}><span className='custom-text'>Login!</span></button>
                             </div>
                         </div>
                     </div>

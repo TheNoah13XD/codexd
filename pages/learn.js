@@ -104,22 +104,20 @@ const learn = () => {
 
     return (
         <>
-            <div className="col-9-xs">
-                <div className="mt-2">
-                    <ChatInput onSend={(input) => callApi(input)} disabled={loading} />
-                </div>
+            <div className="mt-2">
+                <ChatInput onSend={(input) => callApi(input)} disabled={loading} />
+            </div>
 
-                <div>
-                    {
-                        messages.map((message) => (
-                            <ChatMessage key={message.key} text={message.text} from={message.from} />
-                        ))
-                    }
+            <div>
+                {
+                    messages.map((message) => (
+                        <ChatMessage key={message.key} text={message.text} from={message.from} />
+                    ))
+                }
 
-                    {
-                        messages.length === 0 && <p className="custom-text mt-2">I am at your service!</p>
-                    }
-                </div>
+                {
+                    messages.length === 0 && <p className="custom-text mt-2">I am at your service!</p>
+                }
             </div>
         </>
     );
