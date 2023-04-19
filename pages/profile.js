@@ -64,6 +64,7 @@ const profile = () => {
 
     useEffect(() => {
         console.log(data)
+        console.log(currentUser)
     }, [data])
     
     return (
@@ -83,7 +84,7 @@ const profile = () => {
                         </div>
                         <div className="col-4-xs">
                             <label htmlFor="username" className="custom-text">Username:</label>
-                            <input type="text" className='mt-2 input-t' placeholder={currentUser[0].username}
+                            <input type="text" className='mt-2 input-t' placeholder="Noah"
                                 id='username'
                                 label='username'
                                 value={profile.username}
@@ -92,7 +93,7 @@ const profile = () => {
                         </div>
                         <div className="col-4-xs ml-4">
                             <label htmlFor="username" className="custom-text">Email:</label>
-                            <input type="email" className='mt-2 input-t' placeholder={currentUser[0].email}
+                            <input type="email" className='mt-2 input-t' placeholder="broken.contact.1211@gmail.com" 
                                 id='email'
                                 label='email'
                                 value={profile.email}
