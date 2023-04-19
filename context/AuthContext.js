@@ -7,8 +7,6 @@ import {
     signOut
 } from 'firebase/auth'
 import { auth, db } from "../firebase/clientApp"
-import { addDoc, doc, setDoc } from 'firebase/firestore'
-// firebase
 
 const AuthContext = createContext({})
 

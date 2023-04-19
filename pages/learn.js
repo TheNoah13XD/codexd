@@ -41,19 +41,23 @@ const ChatInput = ({onSend, disabled}) => {
 
     return (
         <>
-            <form>
+            <form className="display-f align-i-center gap-2">
                 <input type="text" className="input-t" 
                     value={input} 
-                    onChange={(e) => setInput(ev.target.value)}
+                    onChange={(e) => setInput(e.target.value)}
                     placeholder="Type your message here..."
                     disabled={disabled}
                     onKeyDown={handleKeyDown}
                 />
                 {disabled && (
-                    <MaterialSymbol icon="send" size={24} className="custom-text" />
+                    <div className="cursor">
+                        <MaterialSymbol icon="crop_square" size={24} className="custom-text" />
+                    </div>
                 )}
                 {!disabled && (
-                    <MaterialSymbol icon="crop_square" size={24} className="custom-text" onClick={sendInput} />
+                    <div className="cursor">
+                        <MaterialSymbol icon="send" size={24} className="custom-text" onClick={sendInput} />
+                    </div>
                 )}
             </form>
         </>
@@ -100,20 +104,22 @@ const learn = () => {
 
     return (
         <>
-            <div>
-                <ChatInput onSend={(input) => callApi(input)} disabled={loading} />
-            </div>
+            <div className="col-9-xs">
+                <div className="mt-2">
+                    <ChatInput onSend={(input) => callApi(input)} disabled={loading} />
+                </div>
 
-            <div>
-                {
-                    messages.map((message) => {
-                        <ChatMessage key={message.key} text={message.text} from={message.from} />
-                    })
-                }
+                <div>
+                    {
+                        messages.map((message) => (
+                            <ChatMessage key={message.key} text={message.text} from={message.from} />
+                        ))
+                    }
 
-                {
-                    messages.length === 0 && <p className="custom-text">I am at your service!</p>
-                }
+                    {
+                        messages.length === 0 && <p className="custom-text mt-2">I am at your service!</p>
+                    }
+                </div>
             </div>
         </>
     );
