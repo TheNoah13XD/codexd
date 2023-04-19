@@ -22,7 +22,10 @@ const dashboard = () => {
                 <div>
                     <p className='custom-text fw-md display-f align-i-center'><span>Hey</span> <MaterialSymbol icon="waving_hand" size={24} className='ml-1' /> <span className='ml-1'>Noah!</span></p>
                     <p className='custom-text font-xl-2 mt-2'>good morning</p>
-                    <p className='custom-text mt-2'>Your Points: 0!</p>
+                    <div className="display-f">
+                        <p className='custom-text mt-2'>Your Points: 0!</p>
+                        <p className='custom-text mt-2 ml-3'>Your Badges: 0!</p>
+                    </div>
                     <button className='custom-btn br-full mt-3 custom-text'>continue progress</button>
                 </div>
             </div>
