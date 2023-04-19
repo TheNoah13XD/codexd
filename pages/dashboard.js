@@ -28,7 +28,7 @@ const dashboard = () => {
     const currentUser = data.filter(data => user.uid === data.uid);
 
     useEffect(() => {
-        console.log(data, user, currentUser)
+        console.log(data, user, currentUser)    
     }, [data, user, currentUser])
 
     return (
